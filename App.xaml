@@ -2,12 +2,24 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:LetMeRemindYou"
-             StartupUri="MainWindow.xaml">
+             StartupUri="Main.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <!--<ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDark.xaml"/>-->
+                        <!--替换原始色系-->
+                        <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Colors/Colors.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Colors/ColorsDark.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Basic.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Brushes.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Fonts.xaml"/>
+                        <ResourceDictionary Source="pack://application:,,,/Resources/Basic/Geometries.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

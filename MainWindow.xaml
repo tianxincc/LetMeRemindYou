@@ -28,7 +28,37 @@
             <Label Content="测试" Margin="10" Style="{DynamicResource LabelInfo}" ></Label>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="0">
-            <Button  Padding="10,0" Background="Salmon" Foreground="White" Content="测试" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+            <Button Click="FormSub_Click"  x:Name="FormSub" Padding="10,0" Background="Salmon" Foreground="White" Content="提交表单" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="0">
+            <Button Click="YiYan_Click" x:Name="YiYan" Padding="10,0" Background="Salmon" Foreground="White" Content="一言" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="0">
+            <Button   x:Name="Yingjian" Padding="10,0" Background="Salmon" Foreground="White" Content="硬件信息" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="4" Grid.Row="0">
+            <Button   x:Name="Nongli" Padding="10,0" Background="Salmon" Foreground="White" Content="中国农历" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="5" Grid.Row="0">
+            <Button   x:Name="YingZhengMa" Padding="10,0" Background="Salmon" Foreground="White" Content="验证码" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Button   x:Name="Youjian" Padding="10,0" Background="Salmon" Foreground="White" Content="邮件" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Button  x:Name="Mima" Padding="10,0" Background="Salmon" Foreground="White" Content="各类加解密" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Button Click="JingLingClick" x:Name="JingLing" Padding="10,0" Background="Salmon" Foreground="White" Content="精灵" Style="{StaticResource ButtonCustom}" controls:BackgroundSwitchElement.MouseHoverBackground="Red" controls:BackgroundSwitchElement.MouseDownBackground="PaleVioletRed"/>
+        </Grid>
+        <Grid  Grid.Column="3" Grid.Row="1">
+            <hc:FlipClock Margin="32"/>
+        </Grid>
+        <Grid  Grid.Column="4" Grid.Row="1">
+            <hc:NotifyIcon Text="HandyControl" IsBlink="true" Visibility="Visible" Icon="/LetMeRemindYou;component/Resources/Icon/micheng.ico"/>
+        </Grid>
+        <Grid  Grid.Column="5" Grid.Row="1">
+            <hc:NotifyIcon Text="HandyControl" IsBlink="true" Visibility="Visible" Icon="/LetMeRemindYou;component/Resources/Icon/micheng.ico"/>
         </Grid>
 
     </Grid>
