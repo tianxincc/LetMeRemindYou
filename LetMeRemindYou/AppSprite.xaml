@@ -5,10 +5,8 @@
                  Loaded="Load"
        >
     <Border   Effect="{StaticResource EffectShadow1}">
-        <!--<Path Width="48" Height="48" Data="{StaticResource AlarmClock1}" Fill="#BC9F77" Stretch="Uniform"/>-->
         <hc:ImageBlock x:Name="spirit" Source="Resources/Img/Dance.png" Interval="0:0:0.1" Columns="8" Rows="10" StartColumn="0" StartRow="6" EndColumn="7" EndRow="6" Width="50" Height="50" IsPlaying="True"/>
     </Border>
-    <!--<Button Command="hc:ControlCommands.CloseWindow" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" Visibility="{Binding IsMouseOver,RelativeSource={RelativeSource AncestorType=hc:SimplePanel},Converter={StaticResource Boolean2VisibilityConverter}}" Width="22" Height="22" Style="{StaticResource ButtonIcon}" Foreground="White" hc:IconElement.Geometry="{StaticResource ErrorGeometry}" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-8,-8,0"/>-->
     <!--系统托盘栏 -->
     <hc:NotifyIcon x:Name="notifyIcon" Text="澄澄小闹钟" IsBlink="False" Visibility="Visible"  Icon="/Resources/Icon/akcxa-8f5kf-001.ico" >
         <hc:NotifyIcon.ContextContent>
