@@ -23,8 +23,8 @@ namespace LetMeRemindYou
         {
             InitializeComponent();
 
-            TitleMessage.Text = title;
-            MessageContont.Text = contont;
+            TitleMessage.Content = title;
+            //MessageContont.Text = contont;
         }
     }
 }

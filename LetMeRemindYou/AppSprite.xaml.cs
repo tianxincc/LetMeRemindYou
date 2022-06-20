@@ -58,7 +58,7 @@ namespace LetMeRemindYou
         private void ExecuteWaterTimer() 
         {
             Timer t = new Timer();
-            t.Interval = CaseStatus.startInterval;
+            t.Interval = CaseStatus.startInterval_1*10;
             t.Elapsed += new ElapsedEventHandler(Message);
             t.AutoReset = true;
             t.Enabled = true;
@@ -105,7 +105,7 @@ namespace LetMeRemindYou
                     break;
                 default:
                     var BackDefault = BackRandom(CaseStatus.startRandom_1, CaseStatus.startRandom_10);
-                    if (BackDefault == CaseStatus.startRandom_1)
+                    if (BackDefault > CaseStatus.startRandom_1)
                     {
                         var _endeavor = MorningMessage.Messages;
                         var _endeavorMessage = JObject.Parse(_endeavor)["Name" + BackCode].ToString();

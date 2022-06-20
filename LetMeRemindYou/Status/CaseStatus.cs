@@ -17,7 +17,9 @@ namespace LetMeRemindYou.Status
         public static int endRandom_50 = 50;
 
 
-        public static int startInterval = 600000;
+        public static int startInterval_1 = 1000;
+
+        public static int startInterval_2 = 600000;
 
     }
 }
