@@ -23,7 +23,7 @@ namespace LetMeRemindYou
         public Main()
         {
             InitializeComponent();
-            Loaded += NotifyWindow_Loaded;
+            //Loaded += NotifyWindow_Loaded;
         }
 
         private void NotifyWindow_Loaded(object sender, RoutedEventArgs e)

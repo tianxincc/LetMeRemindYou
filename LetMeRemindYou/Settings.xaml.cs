@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace LetMeRemindYou
 {
     /// <summary>
-    /// AboutMe.xaml 的交互逻辑
+    /// Settings.xaml 的交互逻辑
     /// </summary>
-    public partial class AboutMe : Window
+    public partial class Settings 
     {
-        public AboutMe()
+        public Settings()
         {
             InitializeComponent();
         }

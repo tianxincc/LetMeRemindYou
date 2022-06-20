@@ -1,6 +1,7 @@
 ﻿using HandyControl.Controls;
 using HandyControl.Data;
 
+using LetMeRemindYou.Common;
 using LetMeRemindYou.Status;
 
 using Newtonsoft.Json.Linq;
@@ -39,7 +40,7 @@ namespace LetMeRemindYou
 
         private void ExchangeClick(object sender, RoutedEventArgs e)
         {
-            var backNumber=BackRandom(1,10);
+            var backNumber=BackRandom(CaseStatus.startRandom_1, CaseStatus.startRandom_10);
             spirit.EndRow = backNumber;
         }
 
@@ -50,53 +51,67 @@ namespace LetMeRemindYou
 
         private void AboutMeClick(object sender, RoutedEventArgs e)
         {
-            AboutMe aboutMe = new AboutMe();
-            aboutMe.ShowDialog();
+            //AboutMe aboutMe = new AboutMe();
+            //aboutMe.ShowDialog();
         }
 
         private void ExecuteWaterTimer() 
         {
             Timer t = new Timer();
-            t.Interval= 600000;
+            t.Interval = CaseStatus.startInterval;
             t.Elapsed += new ElapsedEventHandler(Message);
-            t.AutoReset = false;
+            t.AutoReset = true;
             t.Enabled = true;
             t.Start(); 
         }
 
-        private void Message(object sender, System.Timers.ElapsedEventArgs e)
+        private void Message(object sender,ElapsedEventArgs e)
         {
             var time = DateTime.Now.ToString("HH:mm:ss");
-            var BackCode = BackRandom(1,50);
+            var BackCode = BackRandom(CaseStatus.startRandom_1,CaseStatus.endRandom_50);
             var _morning=MorningMessage.Messages;
             var _message=JObject.Parse(_morning)["Name" + BackCode].ToString();
             switch (time)
             {
                 case Water.OneWaterTime:
-                    Notification.Show(new NotificationMessage(Water.OneWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.OneWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 case Water.TwoWaterTime:
-                    Notification.Show(new NotificationMessage(Water.TwoWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.TwoWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 case Water.ThreeWaterTime:
-                    Notification.Show(new NotificationMessage(Water.ThreeWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.ThreeWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 case Water.FourWaterTime:
-                    Notification.Show(new NotificationMessage(Water.FourWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.FourWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 case Water.FiveWaterTime:
-                    Notification.Show(new NotificationMessage(Water.FiveWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.FiveWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 case Water.SixWaterTime:
-                    Notification.Show(new NotificationMessage(Water.SixWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    Dispatcher.BeginInvoke(new Action(delegate {
+                        Notification.Show(new NotificationMessage(Water.SixWaterMessage, _message), ShowAnimation.VerticalMove, false);
+                    }));
                     break;
                 default:
-                    var BackDefault = BackRandom(1, 10);
-                    if (BackDefault == 1)
+                    var BackDefault = BackRandom(CaseStatus.startRandom_1, CaseStatus.startRandom_10);
+                    if (BackDefault == CaseStatus.startRandom_1)
                     {
                         var _endeavor = MorningMessage.Messages;
-                        var _endeavorMessage = JObject.Parse(_morning)["Name" + BackCode].ToString();
-                        Notification.Show(new NotificationMessage(Water.CommonWaterName, _endeavorMessage), ShowAnimation.VerticalMove, false);
+                        var _endeavorMessage = JObject.Parse(_endeavor)["Name" + BackCode].ToString();
+                        Dispatcher.BeginInvoke(new Action(delegate {
+                            Notification.Show(new NotificationMessage(Water.CommonWaterName, _endeavorMessage), ShowAnimation.VerticalMove, false);
+                        }));
                     }
                     break;
             }
@@ -107,6 +122,12 @@ namespace LetMeRemindYou
             Random random = new Random();
             var Key = random.Next(startNumber, endNumber);
             return Key;
+        }
+
+        private void SettingsClick(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.ShowDialog();
         }
     }
 }

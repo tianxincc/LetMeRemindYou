@@ -15,8 +15,7 @@
                     <StackPanel  HorizontalAlignment="Center" >
                         <Button  Content="关于澄澄" BorderThickness="0" Click="AboutMeClick"/>
                         <Button  Content="动作更换" BorderThickness="0" Click="ExchangeClick"/>
-                        <Button  Content="手动设置" BorderThickness="0"/>
-                        <Button  Content="参数相关" BorderThickness="0"/>
+                        <Button  Content="参数相关" BorderThickness="0" Click="SettingsClick"/>
                         <Button  Content="退出澄澄" BorderThickness="0" Click="CloseClick"/>
                     </StackPanel>
                 </StackPanel>

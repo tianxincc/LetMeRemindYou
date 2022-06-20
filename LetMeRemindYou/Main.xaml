@@ -7,10 +7,10 @@
         xmlns:local="clr-namespace:LetMeRemindYou"
         mc:Ignorable="d"
         Icon="/LetMeRemindYou;component/Resources/Icon/micheng.ico"
-        WindowStartupLocation ="Manual"
+        WindowStartupLocation ="CenterScreen"
         WindowStyle="None"
-       AllowsTransparency="True"
-        Opacity="0.1"
+        AllowsTransparency="True"
+        Opacity="0.5"
         Title="Main" Height="300" Width="450">
-    
+    <Button Content="213"></Button>
 </hc:Window>

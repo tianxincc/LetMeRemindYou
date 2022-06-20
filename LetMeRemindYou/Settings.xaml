@@ -1,0 +1,39 @@
+﻿<Window x:Class="LetMeRemindYou.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        mc:Ignorable="d"
+        Background="{DynamicResource RegionBrush}"
+        Icon="/Resources/Icon/orange.ico"
+        Title="设置" Width="300" Height="500">
+    <hc:TransitioningContentControl>
+        <hc:ScrollViewer IsInertiaEnabled="True">
+            <hc:SimpleStackPanel Margin="5">
+                <hc:UniformSpacingPanel Spacing="10">
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                </hc:UniformSpacingPanel>
+                <hc:Divider LineStrokeDashArray="2,2"/>
+                <hc:UniformSpacingPanel Spacing="10" Orientation="Vertical">
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                    <Button Content="按钮"/>
+                </hc:UniformSpacingPanel>
+                <hc:Divider LineStrokeDashArray="2,2"/>
+                <hc:UniformSpacingPanel Spacing="10"  ChildWrapping="Wrap" HorizontalAlignment="Left">
+                    <PasswordBox Width="125"  hc:InfoElement.Placeholder="澄澄服饰" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="动画" hc:InfoElement.Necessary="True" Style="{StaticResource PasswordBoxExtend.Small}" />
+                    <PasswordBox Width="125"  hc:InfoElement.Placeholder="内容" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="提示" hc:InfoElement.Necessary="True" Style="{StaticResource PasswordBoxExtend.Small}" />
+                </hc:UniformSpacingPanel>
+                <hc:Divider LineStrokeDashArray="2,2"/>
+                <hc:UniformSpacingPanel Spacing="10" Orientation="Vertical"  ChildWrapping="Wrap" HorizontalAlignment="Left">
+                        <PasswordBox   hc:InfoElement.Placeholder="内容" hc:InfoElement.TitlePlacement="Left" hc:InfoElement.Title="提示" hc:InfoElement.Necessary="True" Style="{StaticResource PasswordBoxExtend.Small}" />
+                </hc:UniformSpacingPanel>
+            </hc:SimpleStackPanel>
+        </hc:ScrollViewer>
+    </hc:TransitioningContentControl>
+</Window>

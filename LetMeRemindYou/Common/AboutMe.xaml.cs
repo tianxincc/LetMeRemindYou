@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LetMeRemindYou
+namespace LetMeRemindYou.Common
 {
     /// <summary>
-    /// WindowIcon.xaml 的交互逻辑
+    /// AboutMe.xaml 的交互逻辑
     /// </summary>
-    public partial class WindowIcon 
+    public partial class AboutMe
     {
-        public WindowIcon()
+        public AboutMe()
         {
             InitializeComponent();
         }
